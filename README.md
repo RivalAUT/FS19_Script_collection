@@ -23,7 +23,7 @@ Die Einstellungen können für jede Fruchtart individuell eingestellt werden. We
 ### **[GroundAdjustedSprayerArm](GroundAdjustedSprayerArm/README.md)**
 GroundAdjustedSprayerArm passt die Gestängehöhe von Spritzen an den Boden an, damit die Gestänge nicht den Boden berühren.
 
-### **[IncreaseHighBeamRange](FS19_IncreaseHighBeamRange/README.md)**
+### **[IncreaseHighBeamRange](IncreaseHighBeamRange/README.md)**
 IncreaseHighBeamRange ist ein eigenständiges globales Script und muss nicht eingebaut werden.
 
 Das Script erhöht die Leuchtweite des Fernlichts in Fahrzeugen. Standardmäßig leuchten die Fernlichter nur 5-10 Meter weiter als das Abblendlicht. Das wird mit diesem Script geändert.

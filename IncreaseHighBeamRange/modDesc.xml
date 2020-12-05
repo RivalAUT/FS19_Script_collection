@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="47">
+    <title>
+        <en>Increase high beam range</en>
+        <de>Erhöhte Fernlicht-Leuchtweite</de>
+    </title>
+    <description>
+		<de><![CDATA[Dieser Mod fügt dem Tempomat 3 verschiedene Stufen hinzu. Diese können mit den Tasten Shift+4 und Strg+4 durchgeschaltet werden.]]>
+		</de>
+		<en><![CDATA[This mod adds 3 speed levels to the cruise control. With the buttons shift+4 and ctrl+4 you can switch levels.]]>
+		</en>
+    </description>
+    <author>Rival</author>
+    <version>1.0.0.0</version>
+    <iconFilename>icon.dds</iconFilename>
+    <multiplayer supported="true"/>
+    <extraSourceFiles>
+        <sourceFile filename="AddSpecialization.lua"/>
+    </extraSourceFiles>
+	
+	<addSpecialization>
+		<specialization name="increaseHighBeamRange" className="IncreaseHighBeamRange" filename="IncreaseHighBeamRange.lua" l10nNameTag="GAME_EXTENSION" debug="false">
+			<restrictions state="0" name="lights" />
+		</specialization>
+	</addSpecialization>
+</modDesc>
