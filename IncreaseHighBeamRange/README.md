@@ -6,4 +6,4 @@ Das Script erhöht die Leuchtweite des Fernlichts in Fahrzeugen. Standardmäßig
 Die Leuchtweite kann im Script in Zeile 17 angepasst werden.
 
 ## **Einbau**
-Da dieses Script global ist, reicht es die [FS19_IncreaseHighBeamRange.zip](https://github.com/RivalAUT/FS19_Script_collection/raw/master/IncreaseHighBeamRange/FS19_IncreaseHighBeamRange.zip) in den Modordner zu kopieren.
+Da dieses Script global ist, reicht es die [FS19_IncreaseHighBeamRange.zip](https://github.com/RivalAUT/FS19_Script_collection/raw/main/IncreaseHighBeamRange/FS19_IncreaseHighBeamRange.zip) in den Modordner zu kopieren.
