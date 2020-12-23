@@ -20,6 +20,10 @@ Mit [Numpad 0] kann ein Info-HUD eingeblendet werden.
 <specialization name="advancedCombine" className="advancedCombine" filename="AdvancedCombine.lua" />
 <!-- in vehicleTypes: -->
 <specialization name="advancedCombine" />
+<!-- Falls kein vehicleType vorhanden ist: -->
+<type name="advancedCombine" parent="combineDrivable" filename="$dataS/scripts/vehicles/Vehicle.lua">
+	<specialization name="advancedCombine" />
+</type>
 
 <!-- Benötigte InputBindings/l10n: -->
 <inputBinding>
@@ -76,6 +80,10 @@ Mit [Numpad 0] kann ein Info-HUD eingeblendet werden.
 ````
 3. Folgenden Eintrag in der Fahrzeug xml hinzufügen:
 ````xml
+<!-- Falls kein eigener vehicleType vorhanden war: vehicle type auf advancedCombine ändern -->
+<vehicle type="advancedCombine">
+
+<!-- Einträge für Script: -->
 <advancedCombine>
 	<!--rotationPartSpillnadel node="6|1|6|3" minRot="0 0 -15" maxRot="0 0 85" rotTime="10" touchRotLimit="10" /-->
 	

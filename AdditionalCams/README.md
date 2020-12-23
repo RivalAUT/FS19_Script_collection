@@ -15,6 +15,10 @@ Es gibt eine Automatik-Funktion, die bei bestimmten Ereignissen automatisch die 
 <specialization name="additionalCams" className="AdditionalCams" filename="AdditionalCams.lua" />
 <!-- in vehicleTypes: -->
 <specialization name="additionalCams" />
+<!-- Falls kein vehicleType vorhanden ist: -->
+<type name="combineDrivableAdditionalCams" parent="combineDrivable" filename="$dataS/scripts/vehicles/Vehicle.lua">
+	<specialization name="additionalCams" />
+</type>
 
 <!-- Benötigte InputBindings/l10n: -->
 <inputBinding>
@@ -39,6 +43,10 @@ Es gibt eine Automatik-Funktion, die bei bestimmten Ereignissen automatisch die 
 3. Kameras in der i3d verbauen
 4. Folgenden Eintrag in der Fahrzeug xml hinzufügen:
 ````xml
+<!-- Falls kein eigener vehicleType vorhanden war: vehicle type auf combineDrivableAdditionalCams ändern -->
+<vehicle type="combineDrivableAdditionalCams">
+
+<!-- Einträge für Script: -->
 <additionalCams>
 	<cam node="rearCamera" position="reverse"/>
 	<cam node="pipeCamera" position="pipe" />

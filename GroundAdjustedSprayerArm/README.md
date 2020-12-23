@@ -15,10 +15,18 @@ Es gibt eine Automatik-Funktion, die bei bestimmten Ereignissen automatisch die 
 <specialization name="groundAdjustedSprayerArm" className="GroundAdjustedSprayerArm" filename="scripts/GroundAdjustedSprayerArm.lua"/>
 <!-- in vehicleTypes: -->
 <specialization name="groundAdjustedSprayerArm"/>
+<!-- Falls kein vehicleType vorhanden ist: -->
+<type name="sprayerGroundAdjustedArms" parent="sprayer" filename="$dataS/scripts/vehicles/Vehicle.lua">
+	<specialization name="groundAdjustedSprayerArm" />
+</type>
 ````
 3. In der i3d leere TransformGroups an den Stellen hinzufügen wo die Höhe vom Gestänge abgefragt/angepasst werden soll. Zudem eine TransformGroup in der Mitte (X Koordinate = 0) erstellen um einen Referenzwert der Höhe zu bekommen.
 4. Folgenden Eintrag in der Fahrzeug xml hinzufügen:
 ````xml
+<!-- Falls kein eigener vehicleType vorhanden war: vehicle type auf sprayerGroundAdjustedArms ändern -->
+<vehicle type="sprayerGroundAdjustedArms">
+
+<!-- Eintrag für Script: -->
 <groundAdjustedSprayerArms arm1="0>0|0|0|0|0|0|0|0" arm2="0>0|0|0|0|1|0|0|0" arm1Raycast="0>0|0|0|0|0|0|0|0|0|0|6" arm2Raycast="0>0|0|0|0|1|0|0|0|0|0|6" midRaycast="0>0|0|0|0|11" foldMin="0" foldMax="0.01"/>
 ````
 - `arm1` ist der Index zu einem der zwei Gestängeteile, z.B. das linke Gestänge. `arm2` ist das gleiche für den zweiten Gestängeteil. Diese Indizes werden ingame auf der Z-Achse rotiert um die Bodenanpassung zu ermöglichen. X und Y Rotationen müssen 0 sein.
