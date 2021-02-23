@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<modDesc descVersion="47">
+<modDesc descVersion="53">
     <title>
         <en>Increase high beam range</en>
         <de>Erhöhte Fernlicht-Leuchtweite</de>
     </title>
     <description>
-		<de><![CDATA[Dieser Mod fügt dem Tempomat 3 verschiedene Stufen hinzu. Diese können mit den Tasten Shift+4 und Strg+4 durchgeschaltet werden.]]>
+		<de><![CDATA[Dieser Mod erhöht die Leuchtweite des Fernlichts und der Arbeitsscheinwerfer.]]>
 		</de>
-		<en><![CDATA[This mod adds 3 speed levels to the cruise control. With the buttons shift+4 and ctrl+4 you can switch levels.]]>
+		<en><![CDATA[This mod increases the range of high beam lights and work lights of vehicles.]]>
 		</en>
     </description>
     <author>Rival</author>
-    <version>1.0.0.0</version>
+    <version>1.1.0.0</version>
     <iconFilename>icon.dds</iconFilename>
     <multiplayer supported="true"/>
     <extraSourceFiles>

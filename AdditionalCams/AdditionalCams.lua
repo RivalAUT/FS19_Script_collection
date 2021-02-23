@@ -97,7 +97,7 @@ function AdditionalCams:addAdditionalCam(camId, position)
 	local spec = self.spec_additionalCams
 	if spec.numCameras < 5 then
 		spec.numCameras = spec.numCameras + 1
-		local overlayId = createRenderOverlay(camId, getScreenAspectRatio(), 512, 512, false, 255, 16711680)
+		local overlayId = createRenderOverlay(camId, getScreenAspectRatio(), 512, 512, true, 255, 16711680)
 		local cam = {camId=camId, overlayId=overlayId, position=position}
 		table.insert(spec.cams, cam)
 	else
