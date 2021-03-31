@@ -5,7 +5,7 @@
 -- @date 06/2020
 
 advancedCombine = {}
---local modName = g_currentModName
+advancedCombine.modName = g_currentModName
 local modDirectory  = g_currentModDirectory
 
 function advancedCombine.prerequisitesPresent(specializations)
@@ -168,10 +168,10 @@ function advancedCombine:onLoad(savegame)
 		curConcaveSetting = Utils.getNoNil(getXMLInt(savegame.xmlFile, string.format("%s.%s.advancedCombine#concave", savegame.key, modName)), curConcaveSetting)
 		curWindSetting = Utils.getNoNil(getXMLInt(savegame.xmlFile, string.format("%s.%s.advancedCombine#wind", savegame.key, modName)), curWindSetting)
 		curSieveSetting = Utils.getNoNil(getXMLInt(savegame.xmlFile, string.format("%s.%s.advancedCombine#sieve", savegame.key, modName)), curSieveSetting)]]
-		curThreshingDrumSpeed = Utils.getNoNil(getXMLFloat(savegame.xmlFile, string.format("%s.advancedCombine#threshingDrum", savegame.key)), curThreshingDrumSpeed)
-		curConcaveSetting = Utils.getNoNil(getXMLInt(savegame.xmlFile, string.format("%s.advancedCombine#concave", savegame.key)), curConcaveSetting)
-		curWindSetting = Utils.getNoNil(getXMLInt(savegame.xmlFile, string.format("%s.advancedCombine#wind", savegame.key)), curWindSetting)
-		curSieveSetting = Utils.getNoNil(getXMLInt(savegame.xmlFile, string.format("%s.advancedCombine#sieve", savegame.key)), curSieveSetting)
+		curThreshingDrumSpeed = Utils.getNoNil(getXMLFloat(savegame.xmlFile, string.format("%s.%s.advancedCombine#threshingDrum", savegame.key, advancedCombine.modName)), curThreshingDrumSpeed)
+		curConcaveSetting = Utils.getNoNil(getXMLInt(savegame.xmlFile, string.format("%s.%s.advancedCombine#concave", savegame.key, advancedCombine.modName)), curConcaveSetting)
+		curWindSetting = Utils.getNoNil(getXMLInt(savegame.xmlFile, string.format("%s.%s.advancedCombine#wind", savegame.key, advancedCombine.modName)), curWindSetting)
+		curSieveSetting = Utils.getNoNil(getXMLInt(savegame.xmlFile, string.format("%s.%s.advancedCombine#sieve", savegame.key, advancedCombine.modName)), curSieveSetting)
 	end
 	spec.combineSettings.currentSetting = {concave=curConcaveSetting, wind=curWindSetting, sieve=curSieveSetting, threshingDrum=curThreshingDrumSpeed}
 	
@@ -228,10 +228,10 @@ end
 
 function advancedCombine:saveToXMLFile(xmlFile, key, usedModNames)
     local spec = self.spec_advancedCombine
-    setXMLInt(xmlFile, string.sub(key, 1, string.find(key, "vehicle%(%d%)")+10).."advancedCombine#threshingDrum", spec.combineSettings.currentSetting.threshingDrum)
-    setXMLInt(xmlFile, string.sub(key, 1, string.find(key, "vehicle%(%d%)")+10).."advancedCombine#concave", spec.combineSettings.currentSetting.concave)
-    setXMLInt(xmlFile, string.sub(key, 1, string.find(key, "vehicle%(%d%)")+10).."advancedCombine#wind", spec.combineSettings.currentSetting.wind)
-    setXMLInt(xmlFile, string.sub(key, 1, string.find(key, "vehicle%(%d%)")+10).."advancedCombine#sieve", spec.combineSettings.currentSetting.sieve)
+	setXMLInt(xmlFile, key.."#threshingDrum", spec.combineSettings.currentSetting.threshingDrum)
+	setXMLInt(xmlFile, key.."#concave", spec.combineSettings.currentSetting.concave)
+	setXMLInt(xmlFile, key.."#wind", spec.combineSettings.currentSetting.wind)
+	setXMLInt(xmlFile, key.."#sieve", spec.combineSettings.currentSetting.sieve)
 end
 
 function advancedCombine:onUpdate(dt)
