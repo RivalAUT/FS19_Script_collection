@@ -45,7 +45,7 @@ function AdditionalCutterCams:onPreDetach(attacherVehicle)
 	local spec = self.spec_additionalCutterCams
 	if attacherVehicle.removeAdditionalCam ~= nil then
 		for i,cam in ipairs(spec.cams) do
-			attacherVehicle:removeAdditionalCam(cam.camId)
+			attacherVehicle:removeAdditionalCam(unpack(cam))
 		end
 	end
 end
